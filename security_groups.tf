@@ -9,7 +9,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
-# SSH Ingress Rule
+# SSH Ingress Rules
 resource "aws_vpc_security_group_ingress_rule" "ssh_ingress" {
   security_group_id = aws_security_group.allow_ssh.id
   cidr_ipv4         = "0.0.0.0/0"
@@ -22,7 +22,7 @@ resource "aws_vpc_security_group_ingress_rule" "ssh_ingress" {
   }
 }
 
-# All Traffic Egress Rule
+# All Traffic Egress Rules
 resource "aws_vpc_security_group_egress_rule" "all_egress" {
   security_group_id = aws_security_group.allow_ssh.id
   cidr_ipv4         = "0.0.0.0/0"
