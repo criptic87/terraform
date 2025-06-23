@@ -18,7 +18,7 @@ Prerequisites
 - Terraform installed
 - Git
 
-Steps:
+Steps(via cli):
 1. git clone https://github.com/criptic87/terraform.git
 2. cd terraform
 3. terraform init
