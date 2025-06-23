@@ -14,16 +14,16 @@ This lab was created as part of my DevOps learning journey to understand network
 Usage
 
 Prerequisites
--AWS CLI configured with IAM user
--Terraform installed
--Git
+- AWS CLI configured with IAM user
+- Terraform installed
+- Git
 
 Steps:
-1 git clone https://github.com/criptic87/terraform.git
-2 cd terraform
-3 terraform init
-4 terraform plan
-5 terraform apply
+1. git clone https://github.com/criptic87/terraform.git
+2. cd terraform
+3. terraform init
+4. terraform plan
+5. terraform apply
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
