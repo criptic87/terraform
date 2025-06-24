@@ -26,9 +26,9 @@ Steps(via cli):
 5. terraform apply
 
 Outputs:
--instance_public_ip
--key pair name
--private_ip
+- instance_public_ip
+- key pair name
+- private_ip
 
 Login to EC2:
 1. chmod 600 my-terraform-key.pem
