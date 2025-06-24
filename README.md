@@ -1,5 +1,7 @@
 Project overview
 
+![Architecture Diagram](./architecture.png)
+
 This is a beginner-friendly Terraform setup to create and provision AWS infrastructure. It demonstrates infrastructure as code (IaC) principles by defining:
 
 - A custom VPC with private and public subnets
