@@ -1,4 +1,4 @@
-Project overview
+# Project Overview
 
 ![Architecture Diagram](./architecture.png)
 
@@ -12,33 +12,43 @@ This is a beginner-friendly Terraform setup to create and provision AWS infrastr
 
 This lab was created as part of my DevOps learning journey to understand networking, IAM, and basic cloud provisioning using Terraform and AWS.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-Usage
+---
 
-Prerequisites
+## Usage
+
+### Prerequisites
 - AWS CLI configured with IAM user
 - Terraform installed
 - Git
 
-Steps(via cli):
-1. git clone https://github.com/criptic87/terraform.git
-2. cd terraform
-3. terraform init
-4. terraform plan
-5. terraform apply
+### Steps (via CLI)
+```bash
+git clone https://github.com/criptic87/terraform.git
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
 
-Outputs:
-- instance_public_ip
-- key pair name
-- private_ip
+To restrict SSH access to your IP (recommended):
+```bash
+terraform apply -var="allowed_ssh_cidr=YOUR_IP/32"
+```
 
-Login to EC2:
-1. chmod 600 my-terraform-key.pem
-2. ssh -i my-terraform-key.pem ubuntu@instance_public_ip
+### Outputs
+- `instance_public_ip`
+- `key_pair_name`
+- `private_ip`
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Login to EC2
+```bash
+chmod 600 my-terraform-key.pem
+ssh -i my-terraform-key.pem ubuntu@<instance_public_ip>
+```
 
-Tools & Technologies
+---
+
+## Tools & Technologies
 
 - Terraform v1.11.2
 - AWS Provider

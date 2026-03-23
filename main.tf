@@ -20,7 +20,18 @@ resource "aws_subnet" "public" {
   }
 }
 
-# 3. Internet Gateway
+# 3. Private Subnet
+resource "aws_subnet" "private" {
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "us-east-1a"
+
+  tags = {
+    Name = "PrivateSubnet"
+  }
+}
+
+# 4. Internet Gateway
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
   tags = {
