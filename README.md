@@ -34,7 +34,7 @@ Outputs:
 
 Login to EC2:
 1. chmod 600 my-terraform-key.pem
-2. ssh -i my-terraform-key.pm ubuntu@instance_public_ip
+2. ssh -i my-terraform-key.pem ubuntu@instance_public_ip
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 

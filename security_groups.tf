@@ -12,7 +12,7 @@ resource "aws_security_group" "allow_ssh" {
 # SSH Ingress Rules
 resource "aws_vpc_security_group_ingress_rule" "ssh_ingress" {
   security_group_id = aws_security_group.allow_ssh.id
-  cidr_ipv4         = "0.0.0.0/0"
+  cidr_ipv4         = var.allowed_ssh_cidr
   from_port         = 22
   to_port           = 22
   ip_protocol       = "tcp"
